@@ -1,0 +1,9 @@
+{
+    "port": 8000,
+    "files": [
+        "./dist/release/**/*"
+    ],
+    "server": {
+        "baseDir": "./dist/release"
+    }
+}

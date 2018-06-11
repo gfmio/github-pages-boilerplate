@@ -1,0 +1,9 @@
+{
+    "port": 8000,
+    "files": [
+        "./dist/debug/**/*"
+    ],
+    "server": {
+        "baseDir": "./dist/debug"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES3",
+        "alwaysStrict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "removeComments": true,
+        "noUnusedLocals": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noEmitHelpers": false,
+        "importHelpers": false,
+        "lib": [
+            "es5",
+            "es6",
+            "dom"
+        ],
+        "jsx": "react",
+    },
+    "include": [
+        "../../src/**/*"
+    ]
+}
