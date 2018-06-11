@@ -15,7 +15,7 @@ module.exports = merge(common, {
     output: {
         path: path.join(__dirname, "..", "..", "dist", "debug"),
         filename: path.join(".", "assets", "js", "main.js"),
-        publicPath: path.join(".", "dist", "debug", "assets"),
+        publicPath: "/",
     },
 
     module: {
@@ -24,6 +24,9 @@ module.exports = merge(common, {
             loader: "awesome-typescript-loader",
             options: {
                 configFileName: path.join(__dirname, "..", "tsconfig", "tsconfig.debug.json"),
+                compilerOptions: {
+                    declaration: false,
+                }
             }
         }, {
             enforce: "pre",

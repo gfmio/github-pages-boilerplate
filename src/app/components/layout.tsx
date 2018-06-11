@@ -1,3 +1,8 @@
+/**
+ * Layout component module
+ */
+// Disable max line length for tsx files
+// tslint:disable:max-line-length
 
 import * as React from "react";
 import { Link } from "react-router-dom";
@@ -41,9 +46,7 @@ export const Layout: React.StatelessComponent<ILayoutProps & React.HTMLAttribute
                     <Flex.Child>
                         <Flex.Container align="start" justify="space-between">
                             <Flex.Child>
-                                <Link to="/privacy-policy">Privacy Policy</Link>
-                                &middot;
-                                <Link to="/terms-of-use">Terms of Use</Link>
+                                <Link to="/privacy-policy">Privacy Policy</Link> &middot; <Link to="/terms-of-use">Terms of Use</Link>
                             </Flex.Child>
                         </Flex.Container>
                     </Flex.Child>

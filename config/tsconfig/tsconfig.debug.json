@@ -1,8 +1,6 @@
 {
     "extends": "./tsconfig.common.json",
     "compilerOptions": {
-        "outDir": "../../dist/debug",
-        "sourceMap": true,
-        "declaration": true
+        "outDir": "../../dist/debug"
     }
 }

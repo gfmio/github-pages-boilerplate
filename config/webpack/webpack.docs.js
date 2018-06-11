@@ -17,6 +17,9 @@ module.exports = merge(release, {
         new CopyWebpackPlugin([{
             from: './CNAME',
             to: '.',
+        }, {
+            from: './.nojekyll',
+            to: '.',
         }]),
     ],
 });
