@@ -4,7 +4,6 @@ const path = require("path");
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
     entry: ["./app/index.tsx", "./scss/index.scss"],
@@ -29,11 +28,5 @@ module.exports = {
             from: './html/404.html',
             to: '.',
         }]),
-        // new MiniCssExtractPlugin({
-        //     // Options similar to the same options in webpackOptions.output
-        //     // both options are optional
-        //     filename: "assets/css/style.css",
-        //     chunkFilename: "[name].css"
-        // }),
     ]
 };

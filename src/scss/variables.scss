@@ -1,0 +1,34 @@
+
+$baseFontSize: 16px;
+$baseLineHeight: 1.618;
+
+$sansFontFamily: "Source Sans Pro", "Source Han Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$baseFontWeight: 400;
+
+$bodyFontFamily: $sansFontFamily;
+
+$paddings: (
+  "none": 0,
+  "xxtiny": 0.125 / 4,
+  "xtiny": 0.125 / 2,
+  "tiny": 0.125,
+  "xxsmall": 0.25,
+  "xsmall": 0.5,
+  "small": 0.75,
+  "medium": 1.0,
+  "large": 1.25,
+  "xlarge": 1.5,
+  "xxlarge": 1.75,
+  "huge-20": 2.0,
+  "huge-25": 2.5,
+  "huge-30": 3.0,
+  "huge-35": 3.5,
+  "huge-40": 4.0,
+  "huge-45": 4.5,
+  "huge-50": 5.0
+);
+
+$colors: ();
+
+$bodyColor: #111111;
+$bodyBgColor: #FFFFFF;

@@ -1,0 +1,55 @@
+
+@each $key, $value in $paddings {
+  $amount: $value * $baseLineHeight * 1.0rem;
+
+  .padding-#{$key} {
+    padding: $amount;
+  }
+
+  .padding-left-#{$key} {
+    padding-left: $amount;
+  }
+  .padding-right-#{$key} {
+    padding-right: $amount;
+  }
+  .padding-top-#{$key} {
+    padding-top: $amount;
+  }
+  .padding-bottom-#{$key} {
+    padding-bottom: $amount;
+  }
+
+  .margin-#{$key} {
+    margin: $amount;
+  }
+
+  .margin-left-#{$key} {
+    margin-left: $amount;
+  }
+  .margin-right-#{$key} {
+    margin-right: $amount;
+  }
+  .margin-top-#{$key} {
+    margin-top: $amount;
+  }
+  .margin-bottom-#{$key} {
+    margin-bottom: $amount;
+  }
+
+  .margin-#{$key}-inverse {
+    margin: -1 * $amount;
+  }
+
+  .margin-left-#{$key}-inverse {
+    margin-left: -1 * $amount;
+  }
+  .margin-right-#{$key}-inverse {
+    margin-right: -1 * $amount;
+  }
+  .margin-top-#{$key}-inverse {
+    margin-top: -1 * $amount;
+  }
+  .margin-bottom-#{$key}-inverse {
+    margin-bottom: -1 * $amount;
+  }
+}
