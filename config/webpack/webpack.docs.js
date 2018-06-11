@@ -11,7 +11,7 @@ module.exports = merge(release, {
     output: {
         path: path.join(__dirname, "..", "..", "docs"),
         filename: path.join(".", "assets", "js", "main.js"),
-        publicPath: path.join(".", "docs", "assets"),
+        publicPath: "/"
     },
     plugins: [
         new CopyWebpackPlugin([{
