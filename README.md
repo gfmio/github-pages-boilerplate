@@ -1,5 +1,5 @@
 # github-pages-boilerplate
 
-Based on [https://github.com/rafrex/spa-github-pages](a minimal example by @rafrex).
+Based on [a minimal example by @rafrex](https://github.com/rafrex/spa-github-pages).
 
 ## License: MIT
