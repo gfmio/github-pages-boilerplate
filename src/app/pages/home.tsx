@@ -12,6 +12,9 @@ export class HomePage extends React.Component {
         return (
             <Layout>
                 <h1>Home</h1>
+                <p>
+                    Code is on <a href="https://github.com/gfmio/github-pages-boilerplate" target="_blank">Github</a>.
+                </p>
             </Layout>
         );
     }

@@ -34,7 +34,12 @@ export const Layout: React.StatelessComponent<ILayoutProps & React.HTMLAttribute
                             </Flex.Child>
                             <Flex.Child as="li">
                                 <Flex.Container align="stretch">
-                                    <Flex.Child><Link to="/non-existent">Non existent</Link></Flex.Child>
+                                    <Flex.Child><Link to="/non-existent">Purposefully broken link</Link></Flex.Child>
+                                </Flex.Container>
+                            </Flex.Child>
+                            <Flex.Child as="li">
+                                <Flex.Container align="stretch">
+                                    <Flex.Child><a href="https://github.com/gfmio/github-pages-boilerplate" target="_blank">Github</a></Flex.Child>
                                 </Flex.Container>
                             </Flex.Child>
                         </Flex.Container>
@@ -54,7 +59,7 @@ export const Layout: React.StatelessComponent<ILayoutProps & React.HTMLAttribute
                     <Flex.Child>
                         <Flex.Container align="start" justify="space-between">
                             <Flex.Child>
-                                <Link to="/privacy-policy">Privacy Policy</Link> &middot; <Link to="/terms-of-use">Terms of Use</Link>
+                                <a href="https://github.com/gfmio/github-pages-boilerplate" target="_blank">Github</a> &middot; <Link to="/privacy-policy">Privacy Policy</Link> &middot; <Link to="/terms-of-use">Terms of Use</Link>
                             </Flex.Child>
                         </Flex.Container>
                     </Flex.Child>
