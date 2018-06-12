@@ -61,16 +61,16 @@
 
   // Separators
 
-  .separate-row-#{key} > :not(:first-child) {
-    margin-left: $value;
+  .separate-row-#{$key} > *:not(:first-child) {
+    margin-left: $amount;
   }
-  .separate-row-reverse-#{key} > :not(:last-child) {
-    margin-right: $value;
+  .separate-row-reverse-#{$key} > *:not(:last-child) {
+    margin-right: $amount;
   }
-  .separate-column-#{key} > :not(:first-child) {
-    margin-top: $value;
+  .separate-column-#{$key} > *:not(:first-child) {
+    margin-top: $amount;
   }
-  .separate-column-reverse-#{key} > :not(:first-child) {
-    margin-bottom: $value;
+  .separate-column-reverse-#{$key} > *:not(:first-child) {
+    margin-bottom: $amount;
   }
 }

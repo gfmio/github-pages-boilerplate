@@ -32,3 +32,12 @@ $colors: ();
 
 $bodyColor: #111111;
 $bodyBgColor: #FFFFFF;
+
+//
+// Mixins
+//
+
+@mixin fontSize($n) {
+  font-size: $n * 1.0rem;
+  line-height: $n * $baseLineHeight * 1.0rem;
+}

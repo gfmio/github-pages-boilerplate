@@ -26,9 +26,17 @@ export const Layout: React.StatelessComponent<ILayoutProps & React.HTMLAttribute
                         Header
                     </Flex.Child>
                     <Flex.Child as="nav">
-                        <Flex.Container as="ul" align="center" justify="flex-end" style={{ listStyle: "none" }}>
-                            <Flex.Child as="li"><Link to="/">Home</Link></Flex.Child>
-                            <Flex.Child as="li"><Link to="/non-existent">Non existent</Link></Flex.Child>
+                        <Flex.Container as="ul" align="stretch" justify="flex-end" style={{ listStyle: "none", height: "100%" }} className="separate-row-medium">
+                            <Flex.Child as="li">
+                                <Flex.Container align="stretch">
+                                    <Flex.Child><Link to="/">Home</Link></Flex.Child>
+                                </Flex.Container>
+                            </Flex.Child>
+                            <Flex.Child as="li">
+                                <Flex.Container align="stretch">
+                                    <Flex.Child><Link to="/non-existent">Non existent</Link></Flex.Child>
+                                </Flex.Container>
+                            </Flex.Child>
                         </Flex.Container>
                     </Flex.Child>
                 </Flex.Container>
