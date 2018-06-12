@@ -2,6 +2,8 @@
 @each $key, $value in $paddings {
   $amount: $value * $baseLineHeight * 1.0rem;
 
+  // Paddings
+
   .padding-#{$key} {
     padding: $amount;
   }
@@ -18,6 +20,8 @@
   .padding-bottom-#{$key} {
     padding-bottom: $amount;
   }
+
+  // Margins
 
   .margin-#{$key} {
     margin: $amount;
@@ -40,6 +44,8 @@
     margin: -1 * $amount;
   }
 
+  // Inverse margins (negative margins)
+
   .margin-left-#{$key}-inverse {
     margin-left: -1 * $amount;
   }
@@ -51,5 +57,20 @@
   }
   .margin-bottom-#{$key}-inverse {
     margin-bottom: -1 * $amount;
+  }
+
+  // Separators
+
+  .separate-row-#{key} > :not(:first-child) {
+    margin-left: $value;
+  }
+  .separate-row-reverse-#{key} > :not(:last-child) {
+    margin-right: $value;
+  }
+  .separate-column-#{key} > :not(:first-child) {
+    margin-top: $value;
+  }
+  .separate-column-reverse-#{key} > :not(:first-child) {
+    margin-bottom: $value;
   }
 }
