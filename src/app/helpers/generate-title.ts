@@ -5,7 +5,7 @@
 
 import { pageTitle, titleSeparator } from "../config";
 
-export function generateTitleFactory(separator, reverse: boolean, ...fixedParts: string[]) {
+export function generateTitleFactory(separator: string, reverse: boolean, ...fixedParts: string[]) {
     return reverse
         ? (...parts: string[]) => [...fixedParts, ...parts].reverse().join(separator)
         : (...parts: string[]) => [...fixedParts, ...parts].join(separator);

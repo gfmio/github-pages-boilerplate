@@ -26,7 +26,7 @@ export class HomePage extends React.Component {
                     The example is held small on purpose to show a working bootstrapped working app, but with enough complexity to mimic a real-world scenario. SCSS compilation is integrated in the build process and everything gets bundled using Webpack. The test suite for mocha and chai is configured (although only a sample test is included) and so is linting and some config for VS Code.
                 </p>
                 <p>
-                    The application can be run with <code>npm run watch</code> or <code>yarn run watch</code>, which watches for file changes and rebuilds the app and serves the app with live-reload locally wiht lite-server. Finally, if you're ready to publish your page, you can run <code>npm run publish</code> to build the production build and push it to the gh-pages branch. Change <code>src/CNAME</code> to support a custom CNAME for your page.
+                    The application can be run with <code>npm run watch</code> or <code>yarn run watch</code>, which watches for file changes and rebuilds the app and serves the app with live-reload locally wiht lite-server. Finally, if you're ready to publish / release your page or publish a new version, you can run <code>npm run release</code> to build the production build and push it to the gh-pages branch. Change <code>src/CNAME</code> to support a custom CNAME for your page.
                 </p>
             </Layout>
         );

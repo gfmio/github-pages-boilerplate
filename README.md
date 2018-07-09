@@ -15,7 +15,7 @@ Based on [a minimal example by @rafrex](https://github.com/rafrex/spa-github-pag
   * Container element
   * Form elements
   * Buttons
-* Create some example pages + content for the example app 
+* Create some example pages + content for the example app
 * Integrate support for Let's Encrypt on Github Pages
 * Write the README / docs
 * Add development and set up branch protection

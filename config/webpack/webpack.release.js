@@ -46,10 +46,6 @@ module.exports = merge(common, {
         new CheckerPlugin({
             configFileName: path.join(__dirname, "..", "tsconfig", "tsconfig.release.json"),
         }),
-        new CopyWebpackPlugin([{
-            from: './html/index.html',
-            to: '.',
-        }]),
         new UglifyJsPlugin({
             parallel: true,
             sourceMap: true,
@@ -59,5 +55,12 @@ module.exports = merge(common, {
                 warnings: false
             },
         }),
+        new CopyWebpackPlugin([{
+            from: './CNAME',
+            to: '.',
+        }, {
+            from: './.nojekyll',
+            to: '.',
+        }]),
     ]
 });
