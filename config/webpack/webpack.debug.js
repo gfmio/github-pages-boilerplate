@@ -20,7 +20,7 @@ module.exports = merge(common, {
 
     output: {
         path: path.join(__dirname, "..", "..", "dist", "debug"),
-        filename: path.join(".", "assets", "js", "[name].js"),
+        filename: path.join(".", "static", "js", "[name].js"),
         publicPath: "/",
     },
 

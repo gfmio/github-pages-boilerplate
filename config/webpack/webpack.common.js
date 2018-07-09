@@ -31,18 +31,16 @@ module.exports = {
             template: './html/404.html',
         }),
         new AppManifestWebpackPlugin({
-            logo: './assets/favicon.png',
-            output: './assets/favicons/',
-            inject: true,
-            emitStats: true,
-            persistentCache: false,
-            config: {
-              path: '/assets/favicons',
-            },
+            // Your source logo
+            logo: "./favicon/favicon.png",
+            // Output path can be relative. Icons will be saved to webpack output directory + output
+            output: '/static/favicons-[hash:8]/',
+            // Change prefix of files  for correct paths in your html and manifest files
+            prefix: "/"
         }),
         new CopyWebpackPlugin([{
             from: './assets/**/*',
-            to: '.'
+            to: './static'
         }]),
     ]
 };

@@ -11,7 +11,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const extractCSS = new ExtractTextPlugin({
-    filename: "assets/css/[name]-[hash].css",
+    filename: "static/css/[name]-[hash].css",
     disable: false,
     allChunks: true
 });
@@ -21,7 +21,7 @@ module.exports = merge(common, {
 
     output: {
         path: path.join(__dirname, "..", "..", "dist", "release"),
-        filename: path.join(".", "assets", "js", "[name]-[hash].js"),
+        filename: path.join(".", "static", "js", "[name]-[hash].js"),
         publicPath: "/",
     },
 
