@@ -9,18 +9,18 @@
   "scripts": {
     "build:debug": "webpack-cli --config ./config/webpack/webpack.debug.js",
     "build:debug:watch": "webpack-cli --config ./config/webpack/webpack.debug.js --watch",
-    "build:release": "webpack-cli --config ./config/webpack/webpack.release.js",
-    "build:release:watch": "webpack-cli --config ./config/webpack/webpack.release.js --watch",
+    "build:release": "NODE_ENV=production webpack-cli --config ./config/webpack/webpack.release.js",
+    "build:release:watch": "NODE_ENV=production webpack-cli --config ./config/webpack/webpack.release.js --watch",
     "build": "npm run build:release",
     "build:watch": "npm run build:release:watch",
-    "start:debug": "lite-server -c ./config/lite-server/bs-config.debug.json",
-    "start:debug:watch": "lite-server -c ./config/lite-server/bs-config.debug.json",
-    "start:release": "lite-server -c ./config/lite-server/bs-config.release.json",
-    "start:release:watch": "lite-server -c ./config/lite-server/bs-config.release.json",
+    "start:debug": "webpack-dev-server --mode development --config ./config/webpack/webpack.debug.js",
+    "start:debug:watch": "webpack-dev-server --watch --mode development --config ./config/webpack/webpack.debug.js",
+    "start:release": "NODE_ENV=production webpack-dev-server --mode production --config ./config/webpack/webpack.release.js",
+    "start:release:watch": "NODE_ENV=production webpack-dev-server --watch --mode production --config ./config/webpack/webpack.release.js",
     "start": "npm run start:release",
     "start:watch": "npm run start:release:watch",
-    "watch:debug": "npm-run-all -p build:debug:watch start:debug:watch",
-    "watch:release": "npm-run-all -p build:release:watch start:release:watch",
+    "watch:debug": "npm-run-all start:debug:watch",
+    "watch:release": "npm-run-all start:release:watch",
     "watch": "npm run watch:debug",
     "pre-release": "npm run build",
     "release": "npm run pre-release && gh-pages -t -d ./dist/release",
@@ -33,7 +33,8 @@
     "pretest": "npm run lint",
     "test": "mocha --reporter spec --require ./config/tests/mocha.tshook.js ./tests/**/*.{js,ts,tsx}",
     "test:watch": "mocha --reporter spec --require ./config/tests/mocha.tshook.js --watch --watch-extensions js,ts,tsx ./tests/**/*.{js,ts,tsx}",
-    "lint": "tslint -c ./config/tslint/tslint.json -p ./config/tsconfig/tsconfig.release.json"
+    "lint": "tslint -c ./config/tslint/tslint.json -p ./config/tsconfig/tsconfig.json",
+    "webpack-bundle-stats": "NODE_ENV=production webpack --profile --json --config ./config/webpack/webpack.release.js > stats.json"
   },
   "dependencies": {
     "react": "^16.4.0",
@@ -56,7 +57,6 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "gh-pages": "^1.2.0",
     "html-webpack-plugin": "^3.2.0",
-    "lite-server": "^2.3.0",
     "mocha": "^5.2.0",
     "node-sass": "^4.9.0",
     "npm-run-all": "^4.1.3",
@@ -68,6 +68,7 @@
     "typescript": "^2.8.3",
     "webpack": "^4.8.1",
     "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4",
     "webpack-merge": "^4.1.2"
   }
 }

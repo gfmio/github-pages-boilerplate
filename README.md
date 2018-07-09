@@ -1,9 +1,17 @@
 # github-pages-boilerplate
 
+A (fairly) minimal example of how to host a modern single page app on Github Pages.
+
 See live at [github-pages-spa.gfm.io](https://github-pages-spa.gfm.io).
-See code at [https://github.com/gfmio/github-pages-boilerplate](https://github.com/gfmio/github-pages-boilerplate).
 
 Based on [a minimal example by @rafrex](https://github.com/rafrex/spa-github-pages).
+
+## Overview
+
+This
+
+
+SSL should work out of the box both with custom s
 
 ## To Do
 

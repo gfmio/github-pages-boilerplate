@@ -3,5 +3,5 @@
  */
 
 require("ts-node").register({
-  project: "./config/tsconfig/tsconfig.release.json",
+  project: "./config/tsconfig/tsconfig.json",
 });

@@ -6,53 +6,51 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
-const { CheckerPlugin } = require("awesome-typescript-loader");
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-const extractCSS = new ExtractTextPlugin({
-    filename: "static/css/[name]-[hash].css",
-    disable: false,
-    allChunks: true
-});
+if (process.env.NODE_ENV !== "production") {
+    throw new Error("Only build for release with NODE_ENV set to production.");
+}
 
 module.exports = merge(common, {
     mode: "production",
 
     output: {
         path: path.join(__dirname, "..", "..", "dist", "release"),
-        filename: path.join(".", "static", "js", "[name]-[hash].js"),
+        filename: path.join(".", "static", "js", "[name]-[hash].bundle.js"),
+        chunkFilename: path.join(".", "static", "js", "[name]-[hash].bundle.js"),
         publicPath: "/",
     },
 
     module: {
-        rules: [{
-            test: /\.tsx?$/,
-            loader: "awesome-typescript-loader",
-            options: {
-                configFileName: path.join(__dirname, "..", "tsconfig", "tsconfig.release.json"),
+        rules: []
+    },
+
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+            minSize: 0,
+            minChunks: 1,
+            maxAsyncRequests: 5,
+            maxInitialRequests: 3,
+            automaticNameDelimiter: '~',
+            name: true,
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true
+                }
             }
-        }, {
-            test: /\.(css|scss)$/,
-            use: extractCSS.extract({
-                fallback: 'style-loader',
-                use: [{
-                    loader: "css-loader",
-                    options: {
-                        minimize: false || {/* CSSNano Options */ }
-                    },
-                }, {
-                    loader: "sass-loader"
-                }],
-            }),
-        }]
+
+        }
     },
 
     plugins: [
-        extractCSS,
-        new CheckerPlugin({
-            configFileName: path.join(__dirname, "..", "tsconfig", "tsconfig.release.json"),
-        }),
         new UglifyJsPlugin({
             parallel: true,
             sourceMap: true,
