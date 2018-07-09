@@ -22,7 +22,7 @@ export const Footer: React.StatelessComponent<IAsComponentProps & React.HTMLAttr
                             <Flex.Child>
                                 <SeparatorList separator=" &middot; ">
                                     <Link to="https://github.com/gfmio/github-pages-boilerplate">Github</Link>
-                                    <Link to="/some-page">Some page</Link>
+                                    <Link to="/non-existent">Purposefully broken link</Link>
                                     <Link to="/another-page">Another page</Link>
                                 </SeparatorList>
                             </Flex.Child>

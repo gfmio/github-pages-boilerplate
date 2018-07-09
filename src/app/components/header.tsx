@@ -18,17 +18,23 @@ export const Header: React.StatelessComponent<IAsComponentProps & React.HTMLAttr
                         <Flex.Container as="ul" align="stretch" justify="flex-end" style={{ listStyle: "none", height: "100%" }} className="separate-row-medium">
                             <Flex.Child as="li">
                                 <Flex.Container align="stretch">
-                                    <Flex.Child><Link to="/">Home</Link></Flex.Child>
+                                    <Flex.Child>
+                                        <Link to="/">Home</Link>
+                                    </Flex.Child>
                                 </Flex.Container>
                             </Flex.Child>
                             <Flex.Child as="li">
                                 <Flex.Container align="stretch">
-                                    <Flex.Child><Link to="/non-existent">Purposefully broken link</Link></Flex.Child>
+                                    <Flex.Child>
+                                        <Link to="/some-page">Some page</Link>
+                                    </Flex.Child>
                                 </Flex.Container>
                             </Flex.Child>
                             <Flex.Child as="li">
                                 <Flex.Container align="stretch">
-                                    <Flex.Child><a href="https://github.com/gfmio/github-pages-boilerplate" target="_blank">Github</a></Flex.Child>
+                                    <Flex.Child>
+                                        <Link to="https://github.com/gfmio/github-pages-boilerplate">Github</Link>
+                                    </Flex.Child>
                                 </Flex.Container>
                             </Flex.Child>
                         </Flex.Container>
