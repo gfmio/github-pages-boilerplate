@@ -5,6 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 
 import { App } from "./app";
 
+import "../scss/index.scss";
+
 window!.onload = () => {
     ReactDOM.render(
         <BrowserRouter>

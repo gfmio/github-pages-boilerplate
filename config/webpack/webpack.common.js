@@ -9,10 +9,10 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: ["./app/index.tsx", "./scss/index.scss"],
+    entry: "./app/index.tsx",
     context: path.join(__dirname, "..", "..", "src"),
     resolve: {
-        extensions: [".html", ".ts", ".tsx", ".js", ".json"],
+        extensions: [".scss", ".css", ".html", ".ts", ".tsx", ".js", ".json"],
     },
 
     module: {
@@ -21,13 +21,11 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            // title: 'My App',
             filename: './index.html',
             inject: false,
             template: './html/index.html'
         }),
         new HtmlWebpackPlugin({
-            // title: 'My App',
             filename: './404.html',
             inject: false,
             template: './html/404.html',
