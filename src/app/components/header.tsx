@@ -1,10 +1,10 @@
 // tslint:disable:max-line-length
 
 import * as React from "react";
-import { Link } from "react-router-dom";
 
 import { Flex } from "./flex";
 import { IAsComponentProps } from "./interfaces";
+import { Link } from "./link";
 
 export const Header: React.StatelessComponent<IAsComponentProps & React.HTMLAttributes<any>> =
     (props: IAsComponentProps & React.HTMLAttributes<any>) => {

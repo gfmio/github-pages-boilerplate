@@ -1,10 +1,11 @@
 // tslint:disable:max-line-length
 
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "./link";
 
 import { Flex } from "./flex";
 import { IAsComponentProps } from "./interfaces";
+import { SeparatorList } from "./separator-list";
 
 export const Footer: React.StatelessComponent<IAsComponentProps & React.HTMLAttributes<any>> =
     (props: IAsComponentProps & React.HTMLAttributes<any>) => {
@@ -19,7 +20,11 @@ export const Footer: React.StatelessComponent<IAsComponentProps & React.HTMLAttr
                     <Flex.Child>
                         <Flex.Container align="start" justify="space-between">
                             <Flex.Child>
-                                <a href="https://github.com/gfmio/github-pages-boilerplate" target="_blank">Github</a> &middot; <Link to="/privacy-policy">Privacy Policy</Link> &middot; <Link to="/terms-of-use">Terms of Use</Link>
+                                <SeparatorList separator=" &middot; ">
+                                    <Link to="https://github.com/gfmio/github-pages-boilerplate">Github</Link>
+                                    <Link to="/some-page">Some page</Link>
+                                    <Link to="/another-page">Another page</Link>
+                                </SeparatorList>
                             </Flex.Child>
                         </Flex.Container>
                     </Flex.Child>
